@@ -1,7 +1,8 @@
 {
-    "name": "CMSy",
+    "name": "cmssy",
     "description": "Playground for headless CMS",
     "repository": "https://github.com/tchief/cmsy.git",
+    "success_url": "/init",
     "formation": {
       "web": {
         "quantity": 1,

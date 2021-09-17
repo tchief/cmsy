@@ -5,7 +5,7 @@ import { insertSeedData } from './seed'
 export default config({
   db: {
     provider: 'postgresql',
-    url: process.env.DATABASE_URL || 'postgres://postgres:example@localhost/cmsy',
+    url: process.env.DATABASE_URL || `postgres://postgres:${process.env.USER}@localhost/cmsy`,
     useMigrations: true,
     async onConnect(context) {
       if (process.argv.includes('--seed-data')) {

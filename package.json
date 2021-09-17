@@ -1,12 +1,12 @@
 {
-  "name": "@keystone-next/example-blog",
+  "name": "cmssy",
   "version": "2.0.7",
   "private": true,
   "license": "MIT",
   "scripts": {
     "dev": "keystone-next dev",
     "start": "keystone-next start",
-    "build": "keystone-next build && keystone-next prisma migrate deploy",
+    "build": "keystone-next build && keystone-next --seed-data && keystone-next prisma migrate deploy",
     "seed-data": "keystone-next --seed-data"    
   },
   "dependencies": {
@@ -19,5 +19,5 @@
   "engines": {
     "node": "^12.20 || >= 14.13"
   },
-  "repository": "https://github.com/keystonejs/keystone/tree/master/examples/blog"
+  "repository": "https://github.com/tchief/cmsy"
 }
