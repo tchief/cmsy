@@ -1,5 +1,5 @@
 import { list } from '@keystone-next/keystone';
-import { checkbox, relationship, text, integer } from '@keystone-next/keystone/fields';
+import { checkbox, relationship, text, integer, password } from '@keystone-next/keystone/fields';
 
 export const lists = {
   Resource: list({
@@ -20,5 +20,12 @@ export const lists = {
       resources: relationship({ ref: "Resource.pages", many: true }),
     },
     defaultIsFilterable: true
+  }),
+  User: list({
+    fields: {
+      name: text({ isRequired: true }),
+      email: text({ isRequired: true, isIndexed: 'unique', isFilterable: true }),
+      password: password({ isRequired: true }),
+    },
   }),
 };

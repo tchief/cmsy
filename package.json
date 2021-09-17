@@ -10,6 +10,7 @@
     "seed-data": "keystone-next --seed-data"    
   },
   "dependencies": {
+    "@keystone-next/auth": "^32.0.0",
     "@keystone-next/keystone": "^25.0.0",
     "slugify": "^1.6.0"
   },
